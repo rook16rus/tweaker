@@ -1,0 +1,98 @@
+.footer {
+  padding: 5rem 0 6.5rem;
+  background-color: #fff;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__left-column {
+    display: flex;
+    flex-direction: column;
+
+    font: var(--text-t4);
+  }
+
+  &__copyright {
+    margin-bottom: 3.7rem;
+  }
+
+  &__requisites {
+    max-width: 17.8rem;
+    margin-bottom: 3.7rem;
+  }
+
+  &__city {
+    margin-top: auto;
+  }
+
+  &__middle-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 13rem;
+  }
+
+  &__logo {
+    width: 18rem;
+    height: 8.4rem;
+    margin-bottom: 2rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    margin-right: -2rem;
+    margin-top: auto;
+  }
+
+  &__socials-link {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 2rem;
+
+    border-radius: 0.7rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__right-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 29rem;
+  }
+
+  .phone-block {
+    margin-bottom: 3rem;
+  }
+
+  &__developer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.3rem;
+    margin-top: auto;
+
+    font: var(--text-t6);
+  }
+
+  &__developer-logo {
+    width: 5rem;
+    height: 4.1rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

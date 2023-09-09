@@ -1,0 +1,38 @@
+-
+  const footerSocials = [
+    "socials-1.png",
+    "socials-2.png",
+    "socials-3.png",
+    "socials-4.png",
+    "socials-5.png",
+    "socials-6.png",
+    "socials-7.png",
+    "socials-8.png",
+    "socials-9.png",
+  ]
+
+footer.footer
+  .container
+    .footer__wrapper
+      .footer__left-column
+        p.footer__copyright
+          | «Выдумщики» ®,2008-2023 г.
+        p.footer__requisites
+          | ООО «Выдумщики» ИНН 4633035424
+        p.footer__city
+          | Россия, г.Москва
+      .footer__middle-column
+        a.footer__logo(href="/")
+          +icon-multi("logo-2")
+        ul.footer__socials
+          for item in footerSocials
+            li.footer__socials-item
+              a.footer__socials-link(href="#")
+                +imgLazy(item, "Логотип соц. сети")
+      .footer__right-column
+        include ../parts/phone-block
+        .footer__developer
+          .footer__developer-logo
+            +imgLazy("developer.svg")
+          p.footer__developer-desc
+            | Упаковка и продвижение франшиз: «Франчайзинг5»
