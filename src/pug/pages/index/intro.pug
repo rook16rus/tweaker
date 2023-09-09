@@ -1,0 +1,29 @@
+-
+  const introAdvantages = [
+    {
+      title: "95%",
+      text : "конверсия в продажи"
+    },
+    {
+      title: "48%",
+      text: "рентабельность по чистой прибыли"
+    },
+    {
+      title: "Еженедельные",
+      text: "поставки товаров"
+    },
+  ]
+
+section.intro(style="background-image: url('assets/images/intro-bg.jpg')")
+  .container
+    h2.intro__title
+      | Стань партнёром компании #[b «Выдумщики»]
+    p.intro__desc
+      | Открой розничный магазин товаров для творчества и зарабатывате ежемесячно от #[b 760 000 рублей чистой прибыли]
+    ul.intro__advantages
+      for item in introAdvantages
+        li.intro__advantages-item
+          h3.intro__advantages-item-title= item.title
+          p.intro__advantages-item-text= item.text
+    button.intro__button.button.button--big.button--red
+      | Узнать подробнее

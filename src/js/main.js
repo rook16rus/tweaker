@@ -19,6 +19,7 @@ import alignHeights from "./modules/alignHeights";
 import inputPlaceholder from "./helpers/inputPlaceholder";
 import customSelects from "./helpers/customSelects";
 import accordions from "./helpers/accordions";
+import header from "./helpers/header";
 
 documenReady(() => {
   window.project_API = { };
@@ -38,6 +39,7 @@ documenReady(() => {
   inputPlaceholder();
   customSelects();
   accordions();
+  header();
 });
 
 document.fonts.ready.then((res) => {

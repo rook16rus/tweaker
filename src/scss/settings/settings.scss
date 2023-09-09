@@ -235,6 +235,10 @@ button:focus {
   }
 }
 
+b {
+  color: var(--primary-color);
+}
+
 a:focus {
   outline: none;
 

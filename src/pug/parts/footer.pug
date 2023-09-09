@@ -22,12 +22,12 @@ footer.footer
         p.footer__city
           | Россия, г.Москва
       .footer__middle-column
-        a.footer__logo(href="/")
+        a.footer__logo.link(href="/")
           +icon-multi("logo-2")
         ul.footer__socials
           for item in footerSocials
             li.footer__socials-item
-              a.footer__socials-link(href="#")
+              a.footer__socials-link.link(href="#")
                 +imgLazy(item, "Логотип соц. сети")
       .footer__right-column
         include ../parts/phone-block
