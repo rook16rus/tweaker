@@ -1,0 +1,76 @@
+-
+  const productionSlider = [
+    {
+      img: "features-1.jpg",
+      text: "мыловаренный цех"
+    },
+    {
+      img: "features-2.jpg",
+      text: "производство силиконовых форм для мыла и выпечки"
+    },
+    {
+      img: "features-3.jpg",
+      text: "изготовление пластиковых форм и упаковки для мыла"
+    },
+    {
+      img: "features-4.jpg",
+      text: "цех лазерной и фрезерной резки дерева"
+    },
+    {
+      img: "features-5.jpg",
+      text: "цех фасовки и упаковки мелкоштучной продукции (1000 м2)"
+    },
+    {
+      img: "features-1.jpg",
+      text: "производство наборов для детского творчества"
+    },
+    {
+      img: "features-2.jpg",
+      text: "теплые современные склады с готовой продукцией;"
+    },
+  ]
+
+-
+  const productionList = [
+    "косметическая основа для шампуня, с которой клиенты <br> компании выигрывают международные гранты",
+    "уникальная «пластилиновая» мыльная <br> основа, не имеющая аналогов в мире",
+    "эксклюзивная мыльная основа «Магия Масла»<br>, способная принимать в себя до 40% любых масел",
+    "уникальная основа для мыла «с нуля» под названием «Нулёвочка»",
+    "косметическая база для глазули шипучек <br> для ванны «Неженка» и многое другое.",
+  ]
+
+section.production
+  .container
+    h2.production__title
+      | #[b Собственное производство] и уникальные рецептуры
+    .production__text
+      p Компания «Выдумщики» сейчас — это центральный офис в Москве, несколько магазинов, большой распределительный центр в Московской области, крупная фабрика и полноценная производственная площадка в 3000 м²:
+    .production__slider-wrapper
+      .production__slider.swiper
+        .swiper-wrapper
+          for item in productionSlider
+            .production__slide.swiper-slide
+              .production__slide-img
+                +pictureLazy(item.img, "Фото")
+                svg(viewbox='0 0 400 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M243.949 16.6684L400 16.6685V8.96454e-05L273.378 8.96454e-05C257.125 8.96454e-05 243.949 7.46276 243.949 16.6684Z' fill='white')
+                  path(d='M242.449 16.6684L0 16.6685L0 8.96454e-05L213.02 8.96454e-05C229.273 8.96454e-05 242.449 7.46276 242.449 16.6684Z' fill='white')
+              p.production__slide-text= item.text
+        .swiper-pagination
+      +slider-navigation()
+    .production__wrapper
+      .production__img
+        +pictureLazy("production-1.png", "Фото")
+      .production__content
+        .production__content-block
+          h3.production__content-title
+            | Разработаны десятки уникальных рецептур
+          ul.production__content-list
+            for item in productionList
+              li.production__content-item!= item
+        .production__desc
+          p
+            | Все выпускаемые товары соответствуют установленным стандартам качества ISO 9001-2011 / ГОСТ и имеют всё необходимую нормативно-техническую документацию.
+        button.button.button--big.button--red
+          | Получить условия сотрудничества
+

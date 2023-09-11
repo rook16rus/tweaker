@@ -21,6 +21,7 @@ import customSelects from "./helpers/customSelects";
 import accordions from "./helpers/accordions";
 import header from "./helpers/header";
 import tabs from "./helpers/tabs";
+import productionSlider from "./helpers/productionSlider";
 
 documenReady(() => {
   window.project_API = {
@@ -44,6 +45,7 @@ documenReady(() => {
   accordions();
   header();
   tabs();
+  productionSlider()
 });
 
 document.fonts.ready.then((res) => {

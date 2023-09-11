@@ -272,16 +272,6 @@ button.swiper-pagination-bullet {
   color: #FF3D00;
 }
 
-button.swiper-button-disabled{
-  opacity: 0;
-  visibility: hidden;
-
-  &:hover {
-    background-color: transparent;
-    color: var(--heading-color);
-  }
-}
-
 .choices {
   color: var(--heading-color);
 
@@ -543,7 +533,7 @@ button.swiper-button-disabled{
 
   width: 0.8rem;
   height: 0.8rem;
-  margin: 0 0.3rem !important;
+  margin: 0 0.3rem;
 
   border: 1px solid var(--stroke-color-2);
   background-color: transparent;

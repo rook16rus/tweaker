@@ -1,0 +1,159 @@
+.production {
+  padding: 7.2rem 0;
+  background-color: #F3F3F3;
+
+  &__title {
+    margin-bottom: 2.5rem;
+
+    font: var(--title-h2);
+    text-align: center;
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    max-width: 112.3rem;
+    margin: 0 auto 6rem;
+
+    text-align: center;
+  }
+
+  &__slider-wrapper {
+    position: relative;
+  }
+
+  &__slider {
+    margin-bottom: 5rem;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    min-height: 43.2rem;
+
+    border-radius: 3rem;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  &__slide-img {
+    position: relative;
+
+    width: 100%;
+    height: 30rem;
+
+    background-color: #D9D9D9;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    svg {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: -1px;
+
+      width: 100%;
+    }
+  }
+
+  &__slide-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 21rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    text-align: center;
+  }
+
+  .slider-navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -6.8rem;
+    right: -6.8rem;
+  }
+
+  .swiper-pagination {
+    margin-top: 4rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+  }
+
+  &__img {
+    position: relative;
+
+    width: 51rem;
+    height: 100%;
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      width: calc(100% + 32rem);
+      max-width: none;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__content-block {
+    padding: 5rem;
+    margin-bottom: 5.2rem;
+
+    border-radius: 3rem;
+    background-color: #fff;
+  }
+
+  &__content-title {
+    max-width: 36rem;
+    margin-bottom: 4.5rem;
+
+    font: var(--text-t1);
+  }
+
+  &__content-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  &__content-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: flex-start;
+    gap: 1.2rem;
+
+    &::before {
+      content: '';
+
+      width: 0.4rem;
+      height: 0.4rem;
+      margin-top: 0.9rem;
+
+      border-radius: 50%;
+      background-color: var(--text-color);
+    }
+  }
+
+  &__desc {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin-bottom: 5.2rem;
+
+    font: var(--text-t5);
+  }
+}
