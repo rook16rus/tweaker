@@ -1,0 +1,57 @@
+-
+  const businessLeftList = [
+    {
+      title: "1 600 000 ₽",
+      text: "Средняя ежемесячная выручка"
+    },
+    {
+      title: "765 000 ₽",
+      text: "Средняя чистая ежемесячная прибыль"
+    },
+    {
+      title: "48,00%",
+      text: "Средняя рентабельность <br> по чистой прибыли, %"
+    },
+  ]
+
+-
+  const businessRightList = [
+    {
+      title: "7 месяцев",
+      text: "Период окупаемости"
+    },
+    {
+      title: "1053",
+      text: "Входящие обращения в месяц"
+    },
+    {
+      title: "1000",
+      text: "Продажи в месяц"
+    },
+  ]
+
+section.business
+  .container
+    .business__inner
+      h2.business__title
+        | Бизнес с #[b  рентабельностью 48%]
+      .business__text
+        p
+          | Самая высокая конкуренция в Москве, но компания «Выдумщики» вышла на стабильные экономические показатели. В регионах есть больший потенциал для развития.
+      .business__wrapper
+        ul.business__list.business__list--left
+          for item in businessLeftList
+            li.business__item
+              .business__item-content
+                h3.business__item-title= item.title
+                p.business__item-text!= item.text
+
+        .business__img
+          +pictureLazy("business-1.png", "Фото")
+
+        ul.business__list.business__list--right
+          for item in businessRightList
+            li.business__item
+              .business__item-content
+                h3.business__item-title= item.title
+                p.business__item-text!= item.text
