@@ -20,9 +20,12 @@ import inputPlaceholder from "./helpers/inputPlaceholder";
 import customSelects from "./helpers/customSelects";
 import accordions from "./helpers/accordions";
 import header from "./helpers/header";
+import tabs from "./helpers/tabs";
 
 documenReady(() => {
-  window.project_API = { };
+  window.project_API = {
+    tabs: []
+  };
 
   lazyIMages();
   initModal();
@@ -40,6 +43,7 @@ documenReady(() => {
   customSelects();
   accordions();
   header();
+  tabs();
 });
 
 document.fonts.ready.then((res) => {

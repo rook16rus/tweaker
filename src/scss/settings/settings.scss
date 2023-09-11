@@ -227,6 +227,32 @@ img {
   }
 }
 
+.js-tabs-container {
+  position: relative;
+}
+
+.js-tab-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.3s;
+
+  &.active {
+    position: static;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
 button:focus {
   outline: none;
 

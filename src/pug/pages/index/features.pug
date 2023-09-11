@@ -1,0 +1,96 @@
+-
+  const featuresList = [
+    {
+      img: "features-1.jpg",
+      text: "Еженедельные поставки товаров головной компанией",
+      active: true
+    },
+    {
+      img: "features-2.jpg",
+      text: "Товары со сроком годности до 5 лет"
+    },
+    {
+      img: "features-3.jpg",
+      text: "Брендбук от Студии Артемия Лебедева"
+    },
+    {
+      img: "features-4.jpg",
+      text: "Передача готового дизайн-проекта"
+    },
+    {
+      img: "features-5.jpg",
+      text: "Помощь в подборе локации с высоким трафиком"
+    },
+  ]
+
+-
+  const featuresBottomList = [
+    {
+      key: "Помещение",
+      value: "от 30 до 50 кв. м."
+    },
+    {
+      key: "Персонал",
+      value: "4 человека"
+    },
+  ]
+
+-
+  const featuresBottomSublist = [
+    {
+      key: "администратор",
+      value: "1"
+    },
+    {
+      key: "продавец-консультант ",
+      value: "3"
+    },
+  ]
+
+section.features
+  .container
+    header.features__header
+      h2.features__title
+        | Розничный магазин по продаже #[b товаров для творчества]
+      p.features__text
+        | По франшизе открывается магазин по продаже товаров для творчества, которые пользуются высоким спросом у любителей и профессионалов.
+    .features__block.js-tabs-container(data-tabs-like-radio="true")
+      .features__img-block
+        each item, index in featuresList
+          .features__img.js-tab-content(data-id=`features${index}` class=`${item.active ? "active" : ""}`)
+            +pictureLazy(item.img, "Фото")
+        svg(width='50' height='553' viewbox='0 0 50 553' fill='none' xmlns='http://www.w3.org/2000/svg')
+          mask#mask0_73_65(style='mask-type:alpha' maskunits='userSpaceOnUse' x='0' y='0' width='50' height='553')
+            rect(width='50' height='100%')
+          g(mask='url(#mask0_73_65)')
+            path(d='M50 219L50 0L-2.48316e-05 2.18557e-06L3.43441e-05 132C3.64444e-05 180.049 22.3858 219 50 219Z' fill='white')
+            path(d='M50 219L50 552.5L3.13366e-06 552.5L1.34377e-05 264.609C1.23367e-05 239.42 22.3858 219 50 219Z' fill='white')
+      .features__content
+        h3.features__subtitle
+          | Преимущества
+        .features__content-text
+          p
+            | бизнес-модели «Выдумщики» — ниша с низкой конкуренций, а ткаже:
+        ul.features__list
+          each item, index in featuresList
+            li.features__item.js-tab(data-href=`features${index}` class=`${item.active ? "tab-active" : ""}`)= item.text
+    .features__bottom
+      .features__bottom-content
+        h3.features__bottom-title
+          | Для организации магазина #[b необходимо]
+        .features__bottom-info
+          ul.features__bottom-list
+            for item in featuresBottomList
+              li.features__bottom-item
+                span= item.key
+                span= item.value
+          ul.features__bottom-sublist
+            for item in featuresBottomSublist
+              li.features__bottom-subitem
+                span= item.key
+                span= item.value
+      .features__bottom-img
+        +pictureLazy("features-bottom-1.jpg", "Фото")
+    svg.features__section-mask(viewbox='0 0 1920 66' fill='none' xmlns='http://www.w3.org/2000/svg')
+      path(d='M960.5 66L1919.5 66V0L1077.03 0C1012.67 0 960.5 29.5492 960.5 66Z' fill='white')
+      path(d='M960.5 66L0.5 66L0.5 0L843.973 0C908.329 0 960.5 29.5492 960.5 66Z' fill='white')
