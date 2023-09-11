@@ -23,10 +23,10 @@
     opacity: 0;
     visibility: hidden;
     width: 100%;
-    max-width: 50rem;
+    max-width: 90.7rem;
     height: auto;
     background-color: #fff;
-    border-radius: 1.6rem;
+    border-radius: 2rem;
     transform: translate(-50%, -50%);
 
     &.modal-open {
@@ -37,7 +37,7 @@
 
   &__content {
     position: relative;
-    padding: 5rem;
+    padding: 5.2rem;
   }
 
   &__close-btn {
@@ -92,5 +92,11 @@
         transform: translate(-50%, -50%) rotate(45deg);
       }
     }
+  }
+}
+
+.modal-partner {
+  &__wrapper {
+
   }
 }

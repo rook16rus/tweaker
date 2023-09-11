@@ -1,0 +1,29 @@
+.input-wrapper {
+  position: relative;
+}
+
+.input {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+
+  font: var(--text-t6);
+
+  &--big {
+    padding: 0 2rem 0 5rem;
+    height: 7.4rem;
+  }
+
+  &--grey {
+    background-color: #E8E8E8;
+    color: rgba(43, 41, 42, 0.42);
+
+    &::placeholder {
+      color: rgba(43, 41, 42, 0.42);
+    }
+  }
+}

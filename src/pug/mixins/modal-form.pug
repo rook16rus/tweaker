@@ -1,0 +1,20 @@
+mixin modal-form(title, name, img, buttonText)
+  .modal-form&attributes(attributes)
+    .modal-form__content
+      h3.modal-form__title!= title
+      .modal-form__img
+        +pictureLazy(img, "Фото")
+    form.modal-form__form(action="#" data-need-validation)
+      .modal-form__inputs
+        .modal-form__input-wrapper.input-wrapper
+          input.modal-form__input.input.input--big.input--grey.js-phone-input(type="tel" name=`${name}Phone` placeholder="+7 (___) ___ ____" required data-parsley-phone)
+        .modal-form__input-wrapper.input-wrapper
+          input.modal-form__input.input.input--big.input--grey(type="email" name=`${name}Email` placeholder="mail@доменКлиента" required)
+        .modal-form__input-wrapper.input-wrapper
+          input.modal-form__input.input.input--big.input--grey(type="text" name=`${name}Name` placeholder="Представьтесь, пожалуйста"  data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
+
+      button.modal-form__button.button.button--big.button--red= buttonText
+
+      input.modal-form__checkbox.visually-hidden(type="checkbox" name=`${name}Confidence` id=`${name}Confidence` required)
+      label.modal-form__checkbox-label(for=`${name}Confidence`)
+        span Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых #[a(href="#") Политикой конфиденциальности]
