@@ -1,15 +1,44 @@
 .about {
   padding: 1.5rem 0 13rem;
 
+  @include mq('custom', 'max', 768) {
+    padding: 1.5rem 0 8rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    padding: 1.5rem 0 4rem;
+  }
+
   &__title {
     max-width: 105rem;
     margin-bottom: 5.8rem;
     font: var(--title-h2);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr auto;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      gap: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+
+    }
   }
 
   &__text {
@@ -19,6 +48,11 @@
     padding-top: 5.8rem;
 
     border-top: 1px solid rgba(0, 0, 0, 0.21);
+
+    @include mq('custom', 'max', 1024) {
+      padding-top: 0;
+      border-top: 0;
+    }
   }
 
   &__authors-block {
@@ -30,6 +64,20 @@
     justify-content: flex-end;
     align-items: center;
     width: 62.4rem;
+
+    @include mq('custom', 'max', 1024) {
+      order: -1;
+      width: auto;
+      align-items: flex-start;
+    }
+
+    @include mq('custom', 'max', 768) {
+
+    }
+
+    @include mq('custom', 'max', 640) {
+
+    }
   }
 
   &__authors-img {
@@ -40,6 +88,10 @@
 
     width: 113.2rem;
     height: 91.4rem;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
 
     img {
       width: 100%;
@@ -57,6 +109,18 @@
     box-shadow: 0 0 3.8rem 0 rgba(0, 0, 0, 0.11);
 
     color: #fff;
+
+    @include mq('custom', 'max', 1024) {
+
+    }
+
+    @include mq('custom', 'max', 768) {
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 1.5rem;
+      border-radius: 2rem;
+    }
   }
 
   &__authors-title {
