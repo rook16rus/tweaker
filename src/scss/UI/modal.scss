@@ -30,6 +30,10 @@
     overflow: hidden;
     transform: translate(-50%, -50%);
 
+    @include mq('custom', 'max', 768) {
+      max-width: 50rem;
+    }
+
     &.modal-open {
       opacity: 1;
       visibility: visible;
@@ -39,6 +43,14 @@
   &__content {
     position: relative;
     padding: 5.2rem 5.2rem 8.5rem  5.2rem;
+
+    @include mq('custom', 'max', 768) {
+      padding: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 3rem;
+    }
   }
 
   &__close-btn {

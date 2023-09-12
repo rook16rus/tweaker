@@ -1,8 +1,24 @@
 .modal-form {
   display: flex;
 
+  @include mq('custom', 'max', 768) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
   &__content {
     margin-right: 7.4rem;
+
+    @include mq('custom', 'max', 768) {
+      margin-right: 0;
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__title {
@@ -10,6 +26,10 @@
 
     font: var(--title-h4);
     text-transform: uppercase;
+
+    @include mq('custom', 'max', 768) {
+      text-align: center;
+    }
   }
 
   &__img {
@@ -22,6 +42,10 @@
 
     border-top-right-radius: 2rem;
     overflow: hidden;
+
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
 
     img {
       width: 100%;
@@ -39,11 +63,19 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 3rem;
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__button {
     width: 100%;
     margin-bottom: 2.6rem;
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__checkbox {
