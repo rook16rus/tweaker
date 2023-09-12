@@ -16,6 +16,58 @@
   </head>
   <body class="page-home">
     <div class="page-wrapper">
+      <div class="loader">
+        <div class="loader__logo">
+          <svg class="icons icons-loader-logo">
+            <use xlink:href="assets/images/sprites/sprite-multi.svg#loader-logo"></use>
+          </svg>
+        </div>
+      </div>
+      <style>
+        .loader {
+          position: fixed;
+          z-index: 100;
+          left: 0;
+          top: 0;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+
+          background-color: #fff;
+          opacity: 1;
+          visibility: visible;
+
+          transition: 0.3s;
+        }
+
+        .animatable .loader {
+          transition-delay: 0.2s;
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .animatable .loader__logo {
+          transform: scale(1.5);
+        }
+
+        .loader__logo {
+          position: relative;
+
+          width: 10rem;
+          height: 10rem;
+
+          transition: 0.3s;
+        }
+
+        .loader__logo svg {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      </style>
 
       <header class="header fix-block">
         <div class="container">
@@ -42,9 +94,9 @@
       <main class="page-main main">
         <section class="intro" style="background-image: url('assets/images/intro-bg.jpg')">
           <div class="container">
-            <h2 class="intro__title">Стань партнёром компании<b>«Выдумщики»</b>
+            <h2 class="intro__title">Стань партнёром компании <b>«Выдумщики»</b>
             </h2>
-            <p class="intro__desc">Открой розничный магазин товаров для творчества и зарабатывате ежемесячно от<b>760 000 рублей чистой прибыли</b>
+            <p class="intro__desc">Открой розничный магазин товаров для творчества и зарабатывате ежемесячно от <b>760 000 рублей чистой прибыли</b>
             </p>
             <ul class="intro__advantages">
               <li class="intro__advantages-item">
@@ -67,7 +119,7 @@
           <div class="container">
 
             <header class="features__header">
-              <h2 class="features__title">Розничный магазин по продаже<b>товаров для творчества</b>
+              <h2 class="features__title">Розничный магазин по продаже <b>товаров для творчества</b>
               </h2>
               <p class="features__text">По франшизе открывается магазин по продаже товаров для творчества, которые пользуются высоким спросом у любителей и профессионалов.</p>
             </header>
@@ -129,7 +181,7 @@
             </div>
             <div class="features__bottom">
               <div class="features__bottom-content">
-                <h3 class="features__bottom-title">Для организации магазина<b>необходимо</b>
+                <h3 class="features__bottom-title">Для организации магазина <b>необходимо</b>
                 </h3>
                 <div class="features__bottom-info">
                   <ul class="features__bottom-list">
@@ -141,7 +193,7 @@
                   <ul class="features__bottom-sublist">
                     <li class="features__bottom-subitem"><span>администратор</span><span>1</span>
                     </li>
-                    <li class="features__bottom-subitem"><span>продавец-консультант</span><span>3</span>
+                    <li class="features__bottom-subitem"><span>продавец-консультант </span><span>3</span>
                     </li>
                   </ul>
                 </div>
@@ -162,7 +214,7 @@
         <section class="business">
           <div class="container">
             <div class="business__inner">
-              <h2 class="business__title">Бизнес с<b>рентабельностью 48%</b>
+              <h2 class="business__title">Бизнес с <b>рентабельностью 48%</b>
               </h2>
               <div class="business__text">
                 <p>Самая высокая конкуренция в Москве, но компания «Выдумщики» вышла на стабильные экономические показатели. В регионах есть больший потенциал для развития.</p>
@@ -221,7 +273,7 @@
         </section>
         <section class="about">
           <div class="container">
-            <h2 class="about__title"><b>«Выдумщики»</b>— история семейного бизнеса От склада в комнате общежития к бизнесу с&nbsp;прибылью 750 000 рублей в месяц</h2>
+            <h2 class="about__title"><b>«Выдумщики»</b> — история семейного бизнеса От склада в комнате общежития к бизнесу с&nbsp;прибылью 750 000 рублей в месяц</h2>
             <div class="about__wrapper">
               <div class="about__text">
                 <p>Желание открыть «что-то своё» впервые возникло в кризисном 2008 году. Приближался Новый год, хотелось делать подарки близким, но с деньгами было сложно. В журнале Cosmopolitan я увидела статью о мыле «своими руками» и загорелась идеей создать такие подарки.</p>
@@ -247,7 +299,7 @@
         </section>
         <section class="production">
           <div class="container">
-            <h2 class="production__title"><b>Собственное производство</b>и уникальные рецептуры</h2>
+            <h2 class="production__title"><b>Собственное производство</b> и уникальные рецептуры</h2>
             <div class="production__text">
               <p>Компания «Выдумщики» сейчас — это центральный офис в Москве, несколько магазинов, большой распределительный центр в Московской области, крупная фабрика и полноценная производственная площадка в 3000 м²:</p>
             </div>
@@ -389,7 +441,7 @@
         </section>
         <section class="shop">
           <div class="container">
-            <h2 class="shop__title">Магазины «Выдумщики» — место притяжения<b>творческих людей</b>
+            <h2 class="shop__title">Магазины «Выдумщики» — место притяжения <b>творческих людей</b>
             </h2>
             <div class="shop__text">
               <p>Принципы работы компании «Выдумщики» — выявить потребности, создать качественный продукт по конкурентной цене, чувствовать тренд и адаптировать его под желания покупателей. Конверсия в продажи 95% — подтверждение правильно выбранной стратегии.</p>
@@ -502,14 +554,14 @@
                 </picture>
               </div>
               <div class="family__content">
-                <h2 class="family__title">Семейный бизнес по франшизе «Выдумщики» — возможность жить<b>по собственным правилам</b>
+                <h2 class="family__title">Семейный бизнес по франшизе «Выдумщики» — возможность жить <b>по собственным правилам</b>
                 </h2>
                 <div class="family__text">
                   <p>Средняя зарплата по России в 2023 году составляет 63,2 тыс. рублей, по данным Росстата. При этом во многих регионах уровень оплаты труда от 33 до 42 тыс. рублей. Для семей с детьми такой зарплаты хватает только на закрытие самых необходимых потребностей.</p>
-                  <p><b>Работая в найме, человек всегда находится в зависимом положении :</b>отпуск по графику, необходимость отпрашиваться по личным делам, проблемы с больничными и т.д. Многие люди задумываются о создании собственного бизнеса, но отсутствие опыта и вероятные риски часто становятся препятствиями что-то менять.</p>
+                  <p><b>Работая в найме, человек всегда находится в зависимом положении : </b>отпуск по графику, необходимость отпрашиваться по личным делам, проблемы с больничными и т.д. Многие люди задумываются о создании собственного бизнеса, но отсутствие опыта и вероятные риски часто становятся препятствиями что-то менять.</p>
                   <p><b>Франшиза «Выдумщики» с готовыми бизнес-процессами и сопровождением опытных наставников — идеальная возможность начать семейное дело, жить в собственном графике и обеспечить комфортный уровень жизни.</b>
                   </p>
-                  <p><b>Спрос на товары для хобби ежегодно растёт и не зависит от сезона</b>, поэтому в магазинах для творчества «Выдумщики» всегда поток покупателей.<b>А поддержка управляющей</b>компании<b>обеспечит выход на стабильно высокую выручку и прибыль.</b>
+                  <p><b>Спрос на товары для хобби ежегодно растёт и не зависит от сезона </b>, поэтому в магазинах для творчества «Выдумщики» всегда поток покупателей. <b>А поддержка управляющей </b>компании <b>обеспечит выход на стабильно высокую выручку и прибыль.</b>
                   </p>
                 </div>
               </div>
@@ -638,7 +690,7 @@
               <button class="modal-form__button button button--big button--red">Узнать подробнее</button>
               <div class="input-wrapper">
                 <input class="modal-form__checkbox visually-hidden" type="checkbox" name="partnerConfidence" id="partnerConfidence" required="required">
-                <label class="modal-form__checkbox-label" for="partnerConfidence"><span>Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых<a href="#">Политикой конфиденциальности</a></span>
+                <label class="modal-form__checkbox-label" for="partnerConfidence"><span>Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых <a href="#">Политикой конфиденциальности</a></span>
                 </label>
               </div>
             </form>
@@ -681,7 +733,7 @@
               <button class="modal-form__button button button--big button--red">Получить финмодель</button>
               <div class="input-wrapper">
                 <input class="modal-form__checkbox visually-hidden" type="checkbox" name="businessConfidence" id="businessConfidence" required="required">
-                <label class="modal-form__checkbox-label" for="businessConfidence"><span>Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых<a href="#">Политикой конфиденциальности</a></span>
+                <label class="modal-form__checkbox-label" for="businessConfidence"><span>Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых <a href="#">Политикой конфиденциальности</a></span>
                 </label>
               </div>
             </form>
@@ -724,7 +776,7 @@
               <button class="modal-form__button button button--big button--red">Получить условия сотрудничества</button>
               <div class="input-wrapper">
                 <input class="modal-form__checkbox visually-hidden" type="checkbox" name="shopConfidence" id="shopConfidence" required="required">
-                <label class="modal-form__checkbox-label" for="shopConfidence"><span>Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых<a href="#">Политикой конфиденциальности</a></span>
+                <label class="modal-form__checkbox-label" for="shopConfidence"><span>Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых <a href="#">Политикой конфиденциальности</a></span>
                 </label>
               </div>
             </form>
