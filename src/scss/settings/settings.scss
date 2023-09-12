@@ -293,8 +293,10 @@ a:focus {
 .link {
   transition: 0.3s;
 
-  &:hover {
-    opacity: 0.7;
+  @include mq("custom", "min", 1025) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
