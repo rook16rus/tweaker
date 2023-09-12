@@ -1,6 +1,10 @@
 .shop {
   padding: 7.2rem 0 8.2rem;
 
+  @include mq('custom', 'max', 768) {
+    padding: 4rem 0;
+  }
+
   &__title {
     max-width: 84rem;
     margin: 0 auto 2.5rem;
@@ -16,6 +20,15 @@
     margin-bottom: 7.3rem;
 
     text-align: center;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3rem;
+    }
+
   }
 
   &__subtitle {
@@ -23,6 +36,10 @@
 
     font: var(--text-t1);
     text-align: center;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__list {
@@ -30,6 +47,25 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 3.2rem;
     margin-bottom: 6rem;
+
+    @include mq('custom', 'max', 870) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 380) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -41,6 +77,10 @@
     background-color: #fff;
     overflow: hidden;
     box-shadow:  0 0 3.8rem 0 rgba(0, 0, 0, 0.11);
+
+    @include mq('custom', 'max', 640) {
+      border-radius: 2rem;
+    }
   }
 
   &__item-img {
@@ -62,6 +102,10 @@
 
     font: var(--text-t6);
     text-align: center;
+
+    @include mq('custom', 'max', 1024) {
+      padding: 1rem 2rem;
+    }
   }
 
   &__desc {
