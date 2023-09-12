@@ -2,8 +2,30 @@
   padding: 5rem 0 6.5rem;
   background-color: #fff;
 
+  @include mq('custom', 'max', 768) {
+    padding: 3rem 0;
+  }
+
+  @include mq('custom', 'max', 640) {
+    padding: 2rem 0;
+  }
+
   &__wrapper {
     display: flex;
+
+    @include mq('custom', 'max', 1024) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 3rem;
+    }
+
+    @include mq('custom', 'max', 440) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__left-column {
@@ -11,15 +33,35 @@
     flex-direction: column;
 
     font: var(--text-t4);
+
+    @include mq('custom', 'max', 440) {
+      order: 1;
+    }
   }
 
   &__copyright {
     margin-bottom: 3.7rem;
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 440) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__requisites {
     max-width: 17.8rem;
     margin-bottom: 3.7rem;
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 440) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__city {
@@ -32,12 +74,31 @@
     align-items: center;
     margin-left: auto;
     margin-right: 13rem;
+
+    @include mq('custom', 'max', 1024) {
+      grid-row: 1 / 2;
+      grid-column: span 2;
+      margin: 0 auto;
+    }
+
+    @include mq('custom', 'max', 768) {
+
+    }
+
+    @include mq('custom', 'max', 440) {
+      grid-column: span 1;
+    }
   }
 
   &__logo {
     width: 18rem;
     height: 8.4rem;
     margin-bottom: 2rem;
+
+    @include mq('custom', 'max', 640) {
+      width: 15rem;
+      height: 7rem;
+    }
 
     svg {
       width: 100%;
@@ -47,7 +108,10 @@
 
   &__socials {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-right: -2rem;
+    margin-bottom: -2rem;
     margin-top: auto;
   }
 
@@ -56,6 +120,7 @@
     width: 3rem;
     height: 3rem;
     margin-right: 2rem;
+    margin-bottom: 2rem;
 
     border-radius: 0.7rem;
     overflow: hidden;
@@ -75,6 +140,18 @@
 
   .phone-block {
     margin-bottom: 3rem;
+
+    @include mq('custom', 'max', 640) {
+      display: grid;
+    }
+
+    @include mq('custom', 'max', 440) {
+      margin-bottom: 2rem;
+    }
+
+    &__content {
+      display: block;
+    }
   }
 
   &__developer {
