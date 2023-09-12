@@ -95,3 +95,34 @@
     }
   }
 }
+
+.modal-business {
+  .modal-form__img {
+    width: 38rem;
+    height: 36rem;
+  }
+}
+
+.modal-shop {
+  .modal__content {
+    padding-bottom: 4rem;
+  }
+
+  .modal-form__img {
+    position: static;
+
+    width: 20rem;
+    height: 28rem;
+    margin-left: 4rem;
+    margin-top: 3.5rem;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .modal-form__button {
+    padding: 0 2rem;
+    font: var(--text-t5);
+  }
+}

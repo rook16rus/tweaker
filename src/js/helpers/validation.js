@@ -184,6 +184,7 @@ export default function validation() {
             .then((response) => {
               // window.project_API.modal.close();
               // window.project_API.modal.onOpen("success");
+              window.location.replace("./success.html")
 
               $(form).trigger("reset");
             })
