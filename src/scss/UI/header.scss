@@ -10,15 +10,31 @@
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.14);
 
+  @include mq('custom', 'max', 768) {
+    padding: 2rem 0;
+  }
+
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mq('custom', 'max', 768) {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 2rem 0;
+    }
   }
 
   &__logo {
     width: 24rem;
     height: 3.9rem;
+
+    @include mq('custom', 'max', 640) {
+      width: 18rem;
+      height: 3.5rem;
+    }
 
     svg {
       width: 100%;
@@ -28,5 +44,18 @@
 
   &__desc {
     font: var(--text-t6);
+
+    @include mq('custom', 'max', 768) {
+      grid-row: 2 / 3;
+      grid-column: span 2;
+
+      text-align: center;
+    }
+  }
+
+  .phone-block {
+    @include mq('custom', 'max', 640) {
+      margin-left: auto;
+    }
   }
 }
