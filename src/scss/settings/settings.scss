@@ -33,6 +33,10 @@ html {
   @include mq(custom, max, 320) {
     font-size: 9px;
   }
+
+  @include mq(custom, max, 300) {
+    font-size: 8px;
+  }
 }
 
 body {
