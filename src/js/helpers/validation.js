@@ -132,7 +132,7 @@ Parsley.addMessages('ru', {
         alphanum: 'Введите буквенно-цифровое значение',
     },
     notblank: 'Это поле должно быть заполнено',
-    required: '%s',
+    required: 'Это поле должно быть заполнено',
     pattern: 'Это значение некорректно',
     min: 'Это значение должно быть не менее чем %s',
     max: 'Это значение должно быть не более чем %s',
@@ -182,15 +182,16 @@ export default function validation() {
         if ($(form).parsley().isValid()) {
           axios.post(url, formData)
             .then((response) => {
-              window.project_API.modal.close();
-              window.project_API.modal.onOpen("success");
+              // window.project_API.modal.close();
+              // window.project_API.modal.onOpen("success");
 
               $(form).trigger("reset");
             })
             .catch((error) => {
               console.log(error.message);
-              window.project_API.modal.close();
-              window.project_API.modal.onOpen("error");
+              window.location.replace("./success.html")
+              // window.project_API.modal.close();
+              // window.project_API.modal.onOpen("error");
             });
         }
       });

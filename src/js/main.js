@@ -15,8 +15,6 @@ import validation from "./helpers/validation";
 import masks from "./helpers/masks";
 import yandexMap from "./helpers/yandexMap";
 import fileInputs from "./helpers/fileInputs";
-import alignHeights from "./modules/alignHeights";
-import inputPlaceholder from "./helpers/inputPlaceholder";
 import customSelects from "./helpers/customSelects";
 import accordions from "./helpers/accordions";
 import header from "./helpers/header";
@@ -40,7 +38,6 @@ documenReady(() => {
   fancybox();
   yandexMap();
   fileInputs();
-  inputPlaceholder();
   customSelects();
   accordions();
   header();

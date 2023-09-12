@@ -27,6 +27,7 @@
     height: auto;
     background-color: #fff;
     border-radius: 2rem;
+    overflow: hidden;
     transform: translate(-50%, -50%);
 
     &.modal-open {
@@ -37,7 +38,7 @@
 
   &__content {
     position: relative;
-    padding: 5.2rem;
+    padding: 5.2rem 5.2rem 8.5rem  5.2rem;
   }
 
   &__close-btn {
@@ -92,11 +93,5 @@
         transform: translate(-50%, -50%) rotate(45deg);
       }
     }
-  }
-}
-
-.modal-partner {
-  &__wrapper {
-
   }
 }
