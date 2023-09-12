@@ -2,6 +2,10 @@
   padding: 7.2rem 0;
   background-color: #F3F3F3;
 
+  @include mq('custom', 'max', 768) {
+    padding: 4rem 0;
+  }
+
   &__title {
     margin-bottom: 2.5rem;
 
@@ -17,6 +21,14 @@
     margin: 0 auto 6rem;
 
     text-align: center;
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__slider-wrapper {
@@ -25,6 +37,14 @@
 
   &__slider {
     margin-bottom: 5rem;
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__slide {
@@ -35,6 +55,18 @@
     border-radius: 3rem;
     background-color: #fff;
     overflow: hidden;
+
+    @include mq('custom', 'max', 1024) {
+      min-height: 41rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      min-height: auto;
+    }
+
+    @include mq('custom', 'max', 640) {
+      border-radius: 2rem;
+    }
   }
 
   &__slide-img {
@@ -44,6 +76,10 @@
     height: 30rem;
 
     background-color: #D9D9D9;
+
+    @include mq('custom', 'max', 768) {
+      height: 20rem;
+    }
 
     img {
       width: 100%;
@@ -79,16 +115,28 @@
     transform: translateY(-50%);
     left: -6.8rem;
     right: -6.8rem;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   .swiper-pagination {
     margin-top: 4rem;
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 2rem;
+    }
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 2rem;
+
+    @include mq('custom', 'max', 768) {
+      display: block;
+    }
   }
 
   &__img {
@@ -96,6 +144,10 @@
 
     width: 51rem;
     height: 100%;
+
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
 
     img {
       position: absolute;
@@ -115,6 +167,20 @@
 
     border-radius: 3rem;
     background-color: #fff;
+
+    @include mq('custom', 'max', 1024) {
+
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3rem;
+      border-radius: 2rem;
+    }
   }
 
   &__content-title {
@@ -122,12 +188,21 @@
     margin-bottom: 4.5rem;
 
     font: var(--text-t1);
+
+    @include mq('custom', 'max', 768) {
+      max-width: none;
+      margin-bottom: 3rem;
+    }
   }
 
   &__content-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.2rem;
+
+    @include mq('custom', 'max', 768) {
+      gap: 2rem;
+    }
   }
 
   &__content-item {
@@ -155,5 +230,17 @@
     margin-bottom: 5.2rem;
 
     font: var(--text-t5);
+
+    @include mq('custom', 'max', 1024) {
+
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3rem;
+    }
   }
 }

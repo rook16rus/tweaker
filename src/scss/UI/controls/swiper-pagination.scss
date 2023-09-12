@@ -23,4 +23,16 @@
 
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 7.2rem;
+
+  @include mq('custom', 'max', 1024) {
+
+  }
+
+  @include mq('custom', 'max', 768) {
+    margin: 0 1rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+
+  }
 }
