@@ -30,8 +30,8 @@ html {
     font-size: 10px;
   }
 
-  @include mq(custom, max, 320) {
-    font-size: 9px;
+  @include mq(custom, max, 640) {
+    font-size: 8px;
   }
 
   @include mq(custom, max, 300) {
@@ -318,6 +318,10 @@ a:focus {
     padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
     padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
   }
+
+  @include mq('custom', 'max', 640) {
+    max-width: 34rem;
+  }
 }
 
 .container {
@@ -329,6 +333,10 @@ a:focus {
     padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
     padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
   }
+
+  @include mq('custom', 'max', 640) {
+    max-width: 34rem;
+  }
 }
 
 .narrow-container {
@@ -339,6 +347,10 @@ a:focus {
   @supports (width: max(20vw, 100px)) {
     padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
     padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+  }
+
+  @include mq('custom', 'max', 640) {
+    max-width: 34rem;
   }
 }
 
